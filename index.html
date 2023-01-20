@@ -21,14 +21,14 @@
       <article class="article">
         <section class="steps">
           <div class="step">
-            <p class="step-number current-step">1</p>
+            <p class="step-number">1</p>
             <div class="step-wrapper">
               <h2 class="step-title">Step 1</h2>
               <p class="step-paragraph">Your info</p>
             </div>
           </div>
           <div class="step">
-            <p class="step-number">2</p>
+            <p class="step-number current-step">2</p>
             <div class="step-wrapper">
               <h2 class="step-title">Step 2</h2>
               <p class="step-paragraph">Select plan</p>
@@ -50,7 +50,7 @@
           </div>
         </section>
         <section class="details">
-          <div class="detail">
+          <div class="detail hidden">
             <h1 class="detail-title">Personal info</h1>
             <p class="detail-paragraph">
               Please provide your name, email address, and phone number.
@@ -66,7 +66,7 @@
                 />
               </div>
               <div class="form-wrapper">
-                <label for="email">Email</label>
+                <label for="email">Email Address</label>
                 <input
                   type="email"
                   name=""
@@ -76,7 +76,7 @@
               </div>
 
               <div class="form-wrapper">
-                <label for="phone">Phone</label>
+                <label for="phone">Phone Number</label>
                 <input
                   type="text"
                   name=""
@@ -87,7 +87,7 @@
             </form>
             <a href="#" class="btn-next">Next Step</a>
           </div>
-          <div class="detail hidden">
+          <div class="detail">
             <h1 class="detail-title">Select your plan</h1>
             <p class="detail-paragraph">
               You have the option of monthly or yearly billing.
@@ -95,30 +95,35 @@
             <div class="plan">
               <div class="plan-card">
                 <img src="assets/images/icon-arcade.svg" alt="Arcade Plan" />
-                <h3 class="plan-title">Arcade</h3>
-                <p class="plan-price">$9/mo</p>
+                <div class="plan-card-wrapper">
+                  <h3 class="plan-title">Arcade</h3>
+                  <p class="plan-price">$9/mo</p>
+                </div>
               </div>
               <div class="plan-card">
                 <img
                   src="assets/images/icon-advanced.svg"
                   alt="Advanced Plan"
                 />
-                <h3 class="plan-title">Advanced</h3>
-                <p class="plan-price">$12/mo</p>
+                <div class="plan-card-wrapper">
+                  <h3 class="plan-title">Advanced</h3>
+                  <p class="plan-price">$12/mo</p>
+                </div>
               </div>
               <div class="plan-card">
                 <img src="assets/images/icon-pro.svg" alt="Pro Plan" />
-                <h3 class="plan-title">Pro</h3>
-                <p class="plan-price">$15/mo</p>
+                <div class="plan-card-wrapper">
+                  <h3 class="plan-title">Pro</h3>
+                  <p class="plan-price">$15/mo</p>
+                </div>
               </div>
             </div>
             <div class="subscription-type">
-              <p class="monthly">Monthly</p>
-              <img
-                src="assets/images/icon-checkmark.svg"
-                alt="Check subscription type Month or Year"
-              />
-              <p class="yearly">Yearly</p>
+              <p class="monthly active">Monthly</p>
+              <div class="switcher">
+                <div class="circle"></div>
+              </div>
+              <p class="yearly not-active">Yearly</p>
             </div>
             <a href="#" class="btn-next">Next Step</a>
             <a href="#" class="btn-back">Go Back</a>

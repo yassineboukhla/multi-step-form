@@ -175,7 +175,7 @@ body,
   height: 600px;
   display: flex;
   padding: 20px;
-  gap: 90px;
+  gap: 80px;
   border-radius: 20px;
   margin-inline: auto;
   margin-top: 200px;
@@ -255,6 +255,8 @@ body,
   font-weight: 500;
   margin-block-end: 40px;
 }
+
+/* Step 1 Dedicated Styling */
 .form {
   display: flex;
   flex-direction: column;
@@ -283,8 +285,90 @@ body,
   padding: 20px 30px;
   border-radius: 10px;
 }
+.btn-back {
+  position: absolute;
+  bottom: 10%;
+  left: 3%;
+  text-decoration: none;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-neutral-gray);
+  padding: 20px 30px;
+  border-radius: 10px;
+}
 input {
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
   border: 1px solid var(--color-neutral-gray);
+}
+
+/* Step 2 Dedicated Styling */
+.plan {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+.plan-card {
+  width: 33%;
+  border: 1px solid var(--color-neutral-gray);
+  border-radius: 10px;
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 15px 10px;
+}
+.plan-card img {
+  width: 40px;
+}
+.plan-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.plan-title {
+  color: var(--color-marine-blue);
+  font-family: "Ubuntu";
+  font-weight: 500;
+}
+.plan-price {
+  color: var(--color-neutral-gray);
+  font-family: "Ubuntu";
+  font-weight: 500;
+}
+.subscription-type {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-neutral-magnolia);
+  padding: 10px;
+}
+.switcher {
+  background-color: var(--color-marine-blue);
+  width: 40px;
+  padding: 12px 28px;
+  border-radius: 11px;
+  position: relative;
+}
+.circle {
+  background-color: white;
+  width: 18px;
+  padding-block: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 7%;
+  left: 5%;
+}
+.active {
+  font-family: "Ubuntu";
+  color: var(--color-marine-blue);
+  font-weight: bold;
+}
+.not-active {
+  font-family: "Ubuntu";
+  color: var(--color-neutral-gray);
+  font-weight: bold;
 }
