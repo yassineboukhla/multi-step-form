@@ -161,6 +161,7 @@ table {
 }
 
 /* Main styling */
+body,
 .main {
   background-color: var(--color-neutral-magnolia);
   width: 100%;
@@ -175,6 +176,9 @@ table {
   display: flex;
   padding: 20px;
   gap: 90px;
+  border-radius: 20px;
+  margin-inline: auto;
+  margin-top: 200px;
 }
 
 /* Steps section styling */
@@ -224,4 +228,63 @@ table {
   text-transform: uppercase;
   font-family: "Ubuntu";
   font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+/* Details styling */
+.details {
+  padding: 40px;
+  /* background-color: aqua; */
+  position: relative;
+}
+.detail {
+}
+.detail-title {
+  font-size: 30px;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--color-marine-blue);
+  margin-block-end: 15px;
+}
+.detail-paragraph {
+  color: var(--color-neutral-gray);
+  font-family: "Ubuntu";
+  font-weight: 500;
+  margin-block-end: 40px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.form label {
+  color: var(--color-marine-blue);
+  font-family: "Ubuntu";
+  font-weight: 500;
+}
+.btn-next {
+  position: absolute;
+  bottom: 10%;
+  right: 9%;
+  text-decoration: none;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  background-color: var(--color-marine-blue);
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--color-neutral-gray);
 }
