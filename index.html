@@ -15,52 +15,161 @@
     <title>Frontend Mentor | Multi-step form</title>
   </head>
   <body>
-    <!-- Sidebar start -->
-
-    Step 1 Your info Step 2 Select plan Step 3 Add-ons Step 4 Summary
-
-    <!-- Sidebar end -->
-
-    <!-- Step 1 start -->
-
-    Personal info Please provide your name, email address, and phone number.
-    Name e.g. Stephen King Email Address e.g. stephenking@lorem.com Phone Number
-    e.g. +1 234 567 890 Next Step
-
-    <!-- Step 1 end -->
-
-    <!-- Step 2 start -->
-
-    Select your plan You have the option of monthly or yearly billing. Arcade
-    $9/mo Advanced $12/mo Pro $15/mo Monthly Yearly Go Back Next Step
-
-    <!-- Step 2 end -->
-
-    <!-- Step 3 start -->
-
-    Pick add-ons Add-ons help enhance your gaming experience. Online service
-    Access to multiplayer games +$1/mo Larger storage Extra 1TB of cloud save
-    +$2/mo Customizable Profile Custom theme on your profile +$2/mo Go Back Next
-    Step
-
-    <!-- Step 3 end -->
-
-    <!-- Step 4 start -->
-
-    Finishing up Double-check everything looks OK before confirming.
-
-    <!-- Dynamically add subscription and add-on selections here -->
-
-    Total (per month/year) Go Back Confirm
-
-    <!-- Step 4 end -->
-
-    <!-- Step 5 start -->
-
-    Thank you! Thanks for confirming your subscription! We hope you have fun
-    using our platform. If you ever need support, please feel free to email us
-    at support@loremgaming.com.
-
-    <!-- Step 5 end -->
+    <main class="main">
+      <article class="article">
+        <section class="steps">
+          <div class="step">
+            <h2 class="step-title">Step 1</h2>
+            <p class="step-paragraph">Your info</p>
+          </div>
+          <div class="step">
+            <h2 class="step-title">Step 2</h2>
+            <p class="step-paragraph">Select plan</p>
+          </div>
+          <div class="step">
+            <h2 class="step-title">Step 3</h2>
+            <p class="step-paragraph">Add-ons</p>
+          </div>
+          <div class="step">
+            <h2 class="step-title">Step 4</h2>
+            <p class="step-paragraph">Summary</p>
+          </div>
+        </section>
+        <section class="details">
+          <div class="detail">
+            <h1 class="detail-title">Personal info</h1>
+            <p class="detail-paragraph">
+              Please provide your name, email address, and phone number.
+            </p>
+            <form action="" class="form">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="e.g. Stephen King"
+              />
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name=""
+                id=""
+                placeholder="e.g. stephenking@lorem.com"
+              />
+              <label for="phone">Phone</label>
+              <input
+                type="number"
+                name=""
+                id=""
+                placeholder="e.g. +1 234 567 890"
+              />
+            </form>
+            <a href="#" class="btn">Next Step</a>
+          </div>
+          <div class="detail">
+            <h1 class="detail-title">Select your plan</h1>
+            <p class="detail-paragraph">
+              You have the option of monthly or yearly billing.
+            </p>
+            <div class="plan">
+              <div class="plan-card">
+                <img src="assets/images/icon-arcade.svg" alt="Arcade Plan" />
+                <h3 class="plan-title">Arcade</h3>
+                <p class="plan-price">$9/mo</p>
+              </div>
+              <div class="plan-card">
+                <img
+                  src="assets/images/icon-advanced.svg"
+                  alt="Advanced Plan"
+                />
+                <h3 class="plan-title">Advanced</h3>
+                <p class="plan-price">$12/mo</p>
+              </div>
+              <div class="plan-card">
+                <img src="assets/images/icon-pro.svg" alt="Pro Plan" />
+                <h3 class="plan-title">Pro</h3>
+                <p class="plan-price">$15/mo</p>
+              </div>
+            </div>
+            <div class="subscription-type">
+              <p class="monthly">Monthly</p>
+              <img
+                src="assets/images/icon-checkmark.svg"
+                alt="Check subscription type Month or Year"
+              />
+              <p class="yearly">Yearly</p>
+            </div>
+            <a href="#" class="btn-next">Next Step</a>
+            <a href="#" class="btn-back">Go Back</a>
+          </div>
+          <div class="detail">
+            <h1 class="detail-title">Pick add-ons</h1>
+            <p class="detail-paragraph">
+              Add-ons help enhance your gaming experience.
+            </p>
+            <div class="add-ons">
+              <div class="service">
+                <img
+                  src="assets/images/icon-checkmark.svg"
+                  alt="Checkmark addons"
+                />
+                <h3 class="service-title">Online service</h3>
+                <p class="service-paragraph">Access to multiplayer games</p>
+                <p class="service-price">+$1/mo</p>
+              </div>
+              <div class="service">
+                <img
+                  src="assets/images/icon-checkmark.svg"
+                  alt="Checkmark addons"
+                />
+                <h3 class="service-title">Larger storage</h3>
+                <p class="service-paragraph">Extra 1TB of cloud save</p>
+                <p class="service-price">+$2/mo</p>
+              </div>
+              <div class="service">
+                <img
+                  src="assets/images/icon-checkmark.svg"
+                  alt="Checkmark addons"
+                />
+                <h3 class="service-title">Customizable profile</h3>
+                <p class="service-paragraph">Custom theme on your profile</p>
+                <p class="service-price">+$2/mo</p>
+              </div>
+            </div>
+            <a href="#" class="btn-next">Next Step</a>
+            <a href="#" class="btn-back">Go Back</a>
+          </div>
+          <div class="detail">
+            <h1 class="detail-title">Finishing up</h1>
+            <p class="detail-paragraph">
+              Double-check everything looks OK before confirming.
+            </p>
+            <div class="summary">
+              <div class="summary-plan">
+                <h3 class="summary-plan-title">Arcade (Monthly)</h3>
+                <a href="#" class="change-plan">Change</a>
+                <p class="summary-plan-price">$9/mo</p>
+              </div>
+              <div class="summary-services">
+                <div class="serv">
+                  <h4>Online service</h4>
+                  <p class="serv-price">+$1/mo</p>
+                </div>
+                <div class="serv">
+                  <h4>Larger storage</h4>
+                  <p class="serv-price">+$2/mo</p>
+                </div>
+              </div>
+              <div class="total">
+                <h4>Total (per month)</h4>
+                <p>+$12/mo</p>
+              </div>
+              <a href="#" class="btn-next">Next Step</a>
+              <a href="#" class="btn-back">Go Back</a>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
   </body>
 </html>
