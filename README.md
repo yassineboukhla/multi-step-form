@@ -40,6 +40,9 @@ Users should be able to:
 
 ### What I learned
 
+- use transform: scale(1.5) to make checkbox bigger
+- use accent-color to change checkbox color
+
 ## Author
 
 - LinkedIn - [Here](https://www.linkedin.com/in/yassine-boukhla)

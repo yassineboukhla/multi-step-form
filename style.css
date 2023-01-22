@@ -372,3 +372,48 @@ input {
   color: var(--color-neutral-gray);
   font-weight: bold;
 }
+
+/* Step 3 Dedicated Styling */
+.add-ons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.service {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-neutral-gray);
+  border-radius: 10px;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+.service:hover {
+  border-color: var(--color-purplish-blue);
+}
+.checkbox {
+  margin-right: 20px;
+  transform: scale(1.5);
+}
+.checkbox:checked {
+  accent-color: var(--color-purplish-blue);
+}
+.service-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 120px;
+}
+.service-title {
+  font-family: "Ubuntu";
+  font-weight: bold;
+  color: var(--color-marine-blue);
+}
+.service-paragraph {
+  font-family: "Ubuntu";
+  color: var(--color-neutral-gray);
+}
+.service-price {
+  font-family: "Ubuntu";
+  color: var(--color-purplish-blue);
+}
