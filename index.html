@@ -21,7 +21,7 @@
       <article class="article">
         <section class="steps">
           <div class="step">
-            <p class="step-number">1</p>
+            <p class="step-number current-step">1</p>
             <div class="step-wrapper">
               <h2 class="step-title">Step 1</h2>
               <p class="step-paragraph">Your info</p>
@@ -35,7 +35,7 @@
             </div>
           </div>
           <div class="step">
-            <p class="step-number current-step">3</p>
+            <p class="step-number">3</p>
             <div class="step-wrapper">
               <h2 class="step-title">Step 3</h2>
               <p class="step-paragraph">Add-ons</p>
@@ -50,7 +50,7 @@
           </div>
         </section>
         <section class="details">
-          <div class="detail hidden">
+          <div class="detail">
             <h1 class="detail-title">Personal info</h1>
             <p class="detail-paragraph">
               Please provide your name, email address, and phone number.
@@ -128,7 +128,7 @@
             <a href="#" class="btn-next">Next Step</a>
             <a href="#" class="btn-back">Go Back</a>
           </div>
-          <div class="detail">
+          <div class="detail hidden">
             <h1 class="detail-title">Pick add-ons</h1>
             <p class="detail-paragraph">
               Add-ons help enhance your gaming experience.
@@ -169,10 +169,13 @@
             </p>
             <div class="summary">
               <div class="summary-plan">
-                <h3 class="summary-plan-title">Arcade (Monthly)</h3>
-                <a href="#" class="change-plan">Change</a>
+                <div class="summary-plan-wrapper">
+                  <h3 class="summary-plan-title">Arcade (Monthly)</h3>
+                  <a href="#" class="change-plan">Change</a>
+                </div>
                 <p class="summary-plan-price">$9/mo</p>
               </div>
+              <hr />
               <div class="summary-services">
                 <div class="serv">
                   <h4>Online service</h4>
@@ -183,12 +186,13 @@
                   <p class="serv-price">+$2/mo</p>
                 </div>
               </div>
-              <div class="total">
-                <h4>Total (per month)</h4>
-                <p>+$12/mo</p>
-              </div>
               <a href="#" class="btn-next">Next Step</a>
               <a href="#" class="btn-back">Go Back</a>
+            </div>
+
+            <div class="total">
+              <h4>Total (per month)</h4>
+              <p>+$12/mo</p>
             </div>
           </div>
         </section>
