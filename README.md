@@ -26,7 +26,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Here](https://github.com/yassineboukhla/multi-step-form)
-- Live Site URL: [Here](https://yassineboukhla.github.com/multi-step-form)
+- Live Site URL: [Here](https://yassineboukhla.github.io/multi-step-form)
 
 ## My process
 
