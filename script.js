@@ -36,3 +36,34 @@ function nextStep(elem) {
       break;
   }
 }
+// Function responsible for going back to the previous step
+function backStep(elem) {
+  switch (elem.dataset.back) {
+    case "2":
+      elem.parentNode.classList.add("hidden");
+      elem.parentNode.previousElementSibling.classList.remove("hidden");
+      document
+        .querySelector('[data-step="2"]')
+        .classList.remove("current-step");
+      document.querySelector('[data-step="1"]').classList.add("current-step");
+      break;
+    case "3":
+      elem.parentNode.classList.add("hidden");
+      elem.parentNode.previousElementSibling.classList.remove("hidden");
+      document
+        .querySelector('[data-step="3"]')
+        .classList.remove("current-step");
+      document.querySelector('[data-step="2"]').classList.add("current-step");
+      break;
+    case "4":
+      elem.parentNode.classList.add("hidden");
+      elem.parentNode.previousElementSibling.classList.remove("hidden");
+      document
+        .querySelector('[data-step="4"]')
+        .classList.remove("current-step");
+      document.querySelector('[data-step="3"]').classList.add("current-step");
+      break;
+    default:
+      break;
+  }
+}

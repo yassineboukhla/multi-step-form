@@ -133,7 +133,9 @@
             <a href="#" class="btn-next" onclick="nextStep(this)" data-step="2"
               >Next Step</a
             >
-            <a href="#" class="btn-back">Go Back</a>
+            <a href="#" class="btn-back" onclick="backStep(this)" data-back="2"
+              >Go Back</a
+            >
           </div>
           <div class="detail hidden">
             <h1 class="detail-title">Pick add-ons</h1>
@@ -169,7 +171,9 @@
             <a href="#" class="btn-next" onclick="nextStep(this)" data-step="3"
               >Next Step</a
             >
-            <a href="#" class="btn-back">Go Back</a>
+            <a href="#" class="btn-back" onclick="backStep(this)" data-back="3"
+              >Go Back</a
+            >
           </div>
           <div class="detail hidden">
             <h1 class="detail-title">Finishing up</h1>
@@ -195,16 +199,13 @@
                   <p class="serv-price">+$2/mo</p>
                 </div>
               </div>
-              <a
-                href="#"
-                class="btn-next"
-                onclick="nextStep(this)"
-                data-step="4"
-                >Next Step</a
-              >
-              <a href="#" class="btn-back">Go Back</a>
             </div>
-
+            <a href="#" class="btn-next" onclick="nextStep(this)" data-step="4"
+              >Next Step</a
+            >
+            <a href="#" class="btn-back" onclick="backStep(this)" data-back="4"
+              >Go Back</a
+            >
             <div class="total">
               <h4>Total (per month)</h4>
               <p>+$12/mo</p>

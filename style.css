@@ -291,7 +291,7 @@ body,
 .btn-back {
   position: absolute;
   bottom: 10%;
-  left: 3%;
+  left: 8%;
   text-decoration: none;
   font-family: "Ubuntu";
   font-weight: 500;
@@ -299,6 +299,10 @@ body,
   color: var(--color-neutral-gray);
   padding: 20px 30px;
   border-radius: 10px;
+}
+.btn-back:hover {
+  background-color: var(--color-pastel-blue);
+  color: white;
 }
 input {
   padding: 15px;
