@@ -21,28 +21,28 @@
       <article class="article">
         <section class="steps">
           <div class="step">
-            <p class="step-number current-step">1</p>
+            <p class="step-number current-step" data-step="1">1</p>
             <div class="step-wrapper">
               <h2 class="step-title">Step 1</h2>
               <p class="step-paragraph">Your info</p>
             </div>
           </div>
           <div class="step">
-            <p class="step-number">2</p>
+            <p class="step-number" data-step="2">2</p>
             <div class="step-wrapper">
               <h2 class="step-title">Step 2</h2>
               <p class="step-paragraph">Select plan</p>
             </div>
           </div>
           <div class="step">
-            <p class="step-number">3</p>
+            <p class="step-number" data-step="3">3</p>
             <div class="step-wrapper">
               <h2 class="step-title">Step 3</h2>
               <p class="step-paragraph">Add-ons</p>
             </div>
           </div>
           <div class="step">
-            <p class="step-number">4</p>
+            <p class="step-number" data-step="4">4</p>
             <div class="step-wrapper">
               <h2 class="step-title">Step 4</h2>
               <p class="step-paragraph">Summary</p>
@@ -63,6 +63,7 @@
                   name=""
                   id=""
                   placeholder="e.g. Stephen King"
+                  required
                 />
               </div>
               <div class="form-wrapper">
@@ -72,6 +73,7 @@
                   name=""
                   id=""
                   placeholder="e.g. stephenking@lorem.com"
+                  required
                 />
               </div>
 
@@ -82,10 +84,13 @@
                   name=""
                   id=""
                   placeholder="e.g. +1 234 567 890"
+                  required
                 />
               </div>
             </form>
-            <a href="#" class="btn-next">Next Step</a>
+            <a href="#" class="btn-next" onclick="nextStep(this)" data-step="1"
+              >Next Step</a
+            >
           </div>
           <div class="detail hidden">
             <h1 class="detail-title">Select your plan</h1>
@@ -125,7 +130,9 @@
               </div>
               <p class="yearly not-active">Yearly</p>
             </div>
-            <a href="#" class="btn-next">Next Step</a>
+            <a href="#" class="btn-next" onclick="nextStep(this)" data-step="2"
+              >Next Step</a
+            >
             <a href="#" class="btn-back">Go Back</a>
           </div>
           <div class="detail hidden">
@@ -159,7 +166,9 @@
                 <p class="service-price">+$2/mo</p>
               </div>
             </div>
-            <a href="#" class="btn-next">Next Step</a>
+            <a href="#" class="btn-next" onclick="nextStep(this)" data-step="3"
+              >Next Step</a
+            >
             <a href="#" class="btn-back">Go Back</a>
           </div>
           <div class="detail hidden">
@@ -186,7 +195,13 @@
                   <p class="serv-price">+$2/mo</p>
                 </div>
               </div>
-              <a href="#" class="btn-next">Next Step</a>
+              <a
+                href="#"
+                class="btn-next"
+                onclick="nextStep(this)"
+                data-step="4"
+                >Next Step</a
+              >
               <a href="#" class="btn-back">Go Back</a>
             </div>
 
@@ -198,5 +213,6 @@
         </section>
       </article>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>

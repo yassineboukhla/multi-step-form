@@ -40,8 +40,15 @@ Users should be able to:
 
 ### What I learned
 
+## CSS
+
 - use transform: scale(1.5) to make checkbox bigger
 - use accent-color to change checkbox color
+
+## JS
+
+- elem.parentNode.classList.add("hidden"); (Select parent of an element)
+- elem.parentNode.nextElementSibling.classList.remove("hidden"); (Select sibling of parent of an element)
 
 ## Author
 

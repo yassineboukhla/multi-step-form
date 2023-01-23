@@ -285,6 +285,9 @@ body,
   padding: 20px 30px;
   border-radius: 10px;
 }
+.btn-next:hover {
+  background-color: var(--color-purplish-blue);
+}
 .btn-back {
   position: absolute;
   bottom: 10%;
