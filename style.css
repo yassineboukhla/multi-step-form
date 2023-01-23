@@ -231,7 +231,7 @@ body,
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 /* Details styling */
 .details {
@@ -490,4 +490,24 @@ input {
   color: var(--color-purplish-blue);
   font-weight: bold;
   font-size: 20px;
+}
+
+/* Thank you CSS Styling */
+.thankyou {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 100%;
+}
+.thankyou-img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+.thankyou-parag {
+  color: var(--color-neutral-gray);
+  font-family: "Ubuntu";
+  text-align: center;
+  line-height: 25px;
 }

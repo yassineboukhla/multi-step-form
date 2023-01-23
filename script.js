@@ -28,9 +28,7 @@ function nextStep(elem) {
     case "4":
       elem.parentNode.classList.add("hidden");
       elem.parentNode.nextElementSibling.classList.remove("hidden");
-      document
-        .querySelector('[data-step="4"]')
-        .classList.remove("current-step");
+
       break;
     default:
       break;
