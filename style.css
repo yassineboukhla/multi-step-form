@@ -288,6 +288,10 @@ body,
 .btn-next:hover {
   background-color: var(--color-purplish-blue);
 }
+.validation {
+  font-family: "Ubuntu";
+  color: red;
+}
 .btn-back {
   position: absolute;
   bottom: 10%;
