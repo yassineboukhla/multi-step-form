@@ -4,17 +4,23 @@ let plan2 = document.querySelector(".plan2");
 let plan3 = document.querySelector(".plan3");
 let plans = document.querySelectorAll(".plan-card-wrapper");
 let yearlyPlan = false;
+let selectedPlan;
 
 let nameInp = document.querySelector(".name-input");
 let emailInp = document.querySelector(".email-input");
 let phoneInp = document.querySelector(".phone-input");
 
+let validation = document.querySelector(".validation");
+let planValidation = document.querySelector(".plan-validation");
 let circle = document.querySelector(".circle");
 
 let checkbox = document.querySelector(".checkbox");
 
 let services = document.querySelectorAll(".service-price");
+let selectedServices = [];
 
+let summaryPlan = document.querySelector(".summary-plan-title");
+let summaryPlanPrice = document.querySelector(".summary-plan-price");
 // Function responsible for going to the next step
 function nextStep(elem) {
   if (checkInput(elem)) {
@@ -31,22 +37,38 @@ function nextStep(elem) {
         document.querySelector('[data-step="2"]').classList.add("current-step");
         break;
       case "2":
-        elem.parentNode.classList.add("hidden");
-        elem.parentNode.nextElementSibling.classList.remove("hidden");
-        document
-          .querySelector('[data-step="2"]')
-          .classList.remove("current-step");
-        document.querySelector('[data-step="3"]').classList.add("current-step");
+        selectedPlan = plan1.classList.contains("blue-border")
+          ? plan1
+          : plan2.classList.contains("blue-border")
+          ? plan2
+          : plan3.classList.contains("blue-border")
+          ? plan3
+          : false;
+        if (selectedPlan) {
+          planValidation.classList.add("hidden");
+          elem.parentNode.classList.add("hidden");
+          elem.parentNode.nextElementSibling.classList.remove("hidden");
+          document
+            .querySelector('[data-step="2"]')
+            .classList.remove("current-step");
+          document
+            .querySelector('[data-step="3"]')
+            .classList.add("current-step");
 
-        // Change price to yearly for next step (Addons)
-        if (yearlyPlan) {
-          services[0].textContent = "+$10/yr";
-          services[1].textContent = "+$20/yr";
-          services[2].textContent = "+$20/yr";
+          // Change price to yearly for next step (Addons)
+          if (yearlyPlan) {
+            services[0].textContent = "+$10/yr";
+            services[1].textContent = "+$20/yr";
+            services[2].textContent = "+$20/yr";
+          } else {
+            services[0].textContent = "+$1/mo";
+            services[1].textContent = "+$2/mo";
+            services[2].textContent = "+$2/mo";
+          }
         } else {
-          services[0].textContent = "+$1/mo";
-          services[1].textContent = "+$2/mo";
-          services[2].textContent = "+$2/mo";
+          planValidation.textContent = "Must select a plan";
+          planValidation.classList.remove("hidden");
+          planValidation.classList.add("validation");
         }
         break;
       case "3":
@@ -56,6 +78,13 @@ function nextStep(elem) {
           .querySelector('[data-step="3"]')
           .classList.remove("current-step");
         document.querySelector('[data-step="4"]').classList.add("current-step");
+        if (!yearlyPlan) {
+          summaryPlan.textContent =
+            selectedPlan.children[1].children[0].textContent + " (Monthly)";
+          summaryPlanPrice.textContent =
+            selectedPlan.children[1].children[1].textContent;
+        }
+
         break;
       case "4":
         elem.parentNode.classList.add("hidden");
@@ -99,7 +128,6 @@ function backStep(elem) {
   }
 }
 // Function for regex
-let validation = document.querySelector(".validation");
 function checkInput() {
   // Regex provided by chatGPT (I added this comment to let you know in case you need any regex)
   // Just go and get it from chatgpt
@@ -180,7 +208,9 @@ function selectPlan(elem) {
 function addService(elem) {
   if (elem.children[0].checked == false) {
     elem.children[0].checked = true;
+    selectedServices.push(elem);
   } else {
     elem.children[0].checked = false;
+    selectedServices.pop(elem);
   }
 }
