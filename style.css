@@ -330,6 +330,15 @@ input {
   flex-direction: column;
   gap: 40px;
   padding: 15px 10px;
+  cursor: pointer;
+}
+.blue-border {
+  border: 2px solid var(--color-purplish-blue);
+}
+.months-free {
+  font-family: "Ubuntu";
+  color: var(--color-marine-blue);
+  font-size: 12px;
 }
 .plan-card img {
   width: 40px;
@@ -363,6 +372,7 @@ input {
   padding: 12px 28px;
   border-radius: 11px;
   position: relative;
+  cursor: pointer;
 }
 .circle {
   background-color: white;
@@ -371,8 +381,14 @@ input {
   border-radius: 50%;
   position: absolute;
   top: 7%;
+}
+.circle-left {
   left: 5%;
 }
+.circle-right {
+  right: 5%;
+}
+
 .active {
   font-family: "Ubuntu";
   color: var(--color-marine-blue);

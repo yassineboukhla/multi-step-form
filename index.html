@@ -107,14 +107,14 @@
               You have the option of monthly or yearly billing.
             </p>
             <div class="plan">
-              <div class="plan-card">
+              <div class="plan-card plan1" onclick="selectPlan(this)">
                 <img src="assets/images/icon-arcade.svg" alt="Arcade Plan" />
                 <div class="plan-card-wrapper">
                   <h3 class="plan-title">Arcade</h3>
                   <p class="plan-price">$9/mo</p>
                 </div>
               </div>
-              <div class="plan-card">
+              <div class="plan-card plan2" onclick="selectPlan(this)">
                 <img
                   src="assets/images/icon-advanced.svg"
                   alt="Advanced Plan"
@@ -124,7 +124,7 @@
                   <p class="plan-price">$12/mo</p>
                 </div>
               </div>
-              <div class="plan-card">
+              <div class="plan-card plan3" onclick="selectPlan(this)">
                 <img src="assets/images/icon-pro.svg" alt="Pro Plan" />
                 <div class="plan-card-wrapper">
                   <h3 class="plan-title">Pro</h3>
@@ -134,8 +134,8 @@
             </div>
             <div class="subscription-type">
               <p class="monthly active">Monthly</p>
-              <div class="switcher">
-                <div class="circle"></div>
+              <div class="switcher" onclick="changePlan()">
+                <div class="circle circle-left"></div>
               </div>
               <p class="yearly not-active">Yearly</p>
             </div>
