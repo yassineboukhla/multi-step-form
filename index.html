@@ -153,7 +153,7 @@
               Add-ons help enhance your gaming experience.
             </p>
             <div class="add-ons">
-              <div class="service" onclick="addService(this)">
+              <div class="service service1" onclick="addService(this)">
                 <input type="checkbox" name="" id="" class="checkbox" />
                 <div class="service-details">
                   <h3 class="service-title">Online service</h3>
@@ -161,7 +161,7 @@
                 </div>
                 <p class="service-price">+$1/mo</p>
               </div>
-              <div class="service" onclick="addService(this)">
+              <div class="service service2" onclick="addService(this)">
                 <input type="checkbox" name="" id="" class="checkbox" />
                 <div class="service-details">
                   <h3 class="service-title">Larger storage</h3>
@@ -169,7 +169,7 @@
                 </div>
                 <p class="service-price">+$2/mo</p>
               </div>
-              <div class="service" onclick="addService(this)">
+              <div class="service service3" onclick="addService(this)">
                 <input type="checkbox" name="" id="" class="checkbox" />
                 <div class="service-details">
                   <h3 class="service-title">Customizable profile</h3>
@@ -194,21 +194,14 @@
               <div class="summary-plan">
                 <div class="summary-plan-wrapper">
                   <h3 class="summary-plan-title">Arcade (Monthly)</h3>
-                  <a href="#" class="change-plan">Change</a>
+                  <a href="#" class="change-plan" onclick="editPlan(this)"
+                    >Change</a
+                  >
                 </div>
                 <p class="summary-plan-price">$9/mo</p>
               </div>
               <hr />
-              <div class="summary-services">
-                <div class="serv">
-                  <h4>Online service</h4>
-                  <p class="serv-price">+$1/mo</p>
-                </div>
-                <div class="serv">
-                  <h4>Larger storage</h4>
-                  <p class="serv-price">+$2/mo</p>
-                </div>
-              </div>
+              <div class="summary-services"></div>
             </div>
             <a href="#" class="btn-next" onclick="nextStep(this)" data-step="4"
               >Next Step</a
@@ -218,7 +211,7 @@
             >
             <div class="total">
               <h4>Total (per month)</h4>
-              <p>+$12/mo</p>
+              <p class="total-price"></p>
             </div>
           </div>
           <div class="detail hidden thankyou">

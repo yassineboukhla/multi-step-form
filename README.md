@@ -49,6 +49,7 @@ Users should be able to:
 
 - elem.parentNode.classList.add("hidden"); (Select parent of an element)
 - elem.parentNode.nextElementSibling.classList.remove("hidden"); (Select sibling of parent of an element)
+- Use filter to delete a specific element from an array
 
 ## Author
 

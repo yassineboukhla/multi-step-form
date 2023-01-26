@@ -18,9 +18,15 @@ let checkbox = document.querySelector(".checkbox");
 
 let services = document.querySelectorAll(".service-price");
 let selectedServices = [];
+let service1 = document.querySelector(".service1");
+let service2 = document.querySelector(".service2");
+let service3 = document.querySelector(".service3");
 
 let summaryPlan = document.querySelector(".summary-plan-title");
 let summaryPlanPrice = document.querySelector(".summary-plan-price");
+let summaryTotalPrice = document.querySelector(".total-price");
+
+let totalPrice = 0;
 // Function responsible for going to the next step
 function nextStep(elem) {
   if (checkInput(elem)) {
@@ -78,11 +84,103 @@ function nextStep(elem) {
           .querySelector('[data-step="3"]')
           .classList.remove("current-step");
         document.querySelector('[data-step="4"]').classList.add("current-step");
+
+        summaryPlan.textContent =
+          selectedPlan.children[1].children[0].textContent + " (Monthly)";
+        summaryPlanPrice.textContent =
+          selectedPlan.children[1].children[1].textContent;
+
         if (!yearlyPlan) {
-          summaryPlan.textContent =
-            selectedPlan.children[1].children[0].textContent + " (Monthly)";
-          summaryPlanPrice.textContent =
-            selectedPlan.children[1].children[1].textContent;
+          switch (selectedPlan) {
+            case plan1:
+              totalPrice = 9;
+              break;
+            case plan2:
+              totalPrice = 12;
+              break;
+            case plan3:
+              totalPrice = 15;
+              break;
+            default:
+              break;
+          }
+        } else {
+          switch (selectedPlan) {
+            case plan1:
+              totalPrice = 90;
+              break;
+            case plan2:
+              totalPrice = 120;
+              break;
+            case plan3:
+              totalPrice = 150;
+              break;
+            default:
+              break;
+          }
+        }
+        let summaryServices = document.querySelector(".summary-services");
+        summaryServices.replaceChildren();
+        if (selectedServices.length > 0) {
+          selectedServices.forEach((elem) => {
+            let divServ = document.createElement("div");
+            divServ.classList.add("serv");
+            let h4Serv = document.createElement("h4");
+            let h4Content = document.createTextNode(
+              elem.children[1].children[0].textContent
+            );
+            h4Serv.appendChild(h4Content);
+            let pServ = document.createElement("p");
+            let pContent = document.createTextNode(
+              elem.children[2].textContent
+            );
+            pServ.classList.add("serv-price");
+            pServ.appendChild(pContent);
+            divServ.appendChild(h4Serv);
+            divServ.append(pServ);
+            summaryServices.appendChild(divServ);
+            if (!yearlyPlan) {
+              switch (elem) {
+                case service1:
+                  totalPrice += 1;
+                  summaryTotalPrice.textContent = `$${totalPrice}/mo`;
+                  break;
+                case service2:
+                  totalPrice += 2;
+                  summaryTotalPrice.textContent = `$${totalPrice}/mo`;
+                  break;
+                case service3:
+                  totalPrice += 2;
+                  summaryTotalPrice.textContent = `$${totalPrice}/mo`;
+                  break;
+                default:
+                  break;
+              }
+            } else {
+              switch (elem) {
+                case service1:
+                  totalPrice += 10;
+                  summaryTotalPrice.textContent = `$${totalPrice}/yr`;
+                  break;
+                case service2:
+                  totalPrice += 20;
+                  summaryTotalPrice.textContent = `$${totalPrice}/yr`;
+                  break;
+                case service3:
+                  totalPrice += 20;
+                  summaryTotalPrice.textContent = `$${totalPrice}/yr`;
+                  break;
+                default:
+                  break;
+              }
+            }
+          });
+        } else {
+          if (!yearlyPlan) {
+            summaryTotalPrice.textContent = `$${totalPrice}/mo`;
+          } else {
+            summaryTotalPrice.textContent = `$${totalPrice}/yr`;
+          }
         }
 
         break;
@@ -211,6 +309,18 @@ function addService(elem) {
     selectedServices.push(elem);
   } else {
     elem.children[0].checked = false;
-    selectedServices.pop(elem);
+    selectedServices = selectedServices.filter((data) => {
+      if (data != elem) return data;
+    });
   }
+}
+
+// Function responsible for editing plan from summary page
+function editPlan(elem) {
+  elem.parentNode.parentNode.parentNode.parentNode.classList.add("hidden");
+  elem.parentNode.parentNode.parentNode.parentNode.previousElementSibling.previousElementSibling.classList.remove(
+    "hidden"
+  );
+  document.querySelector('[data-step="4"]').classList.remove("current-step");
+  document.querySelector('[data-step="2"]').classList.add("current-step");
 }
