@@ -44,6 +44,7 @@ Users should be able to:
 
 - use transform: scale(1.5) to make checkbox bigger
 - use accent-color to change checkbox color
+- white-space: nowrap; to make a paragraph on same line
 
 ## JS
 

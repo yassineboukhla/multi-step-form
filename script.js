@@ -86,7 +86,8 @@ function nextStep(elem) {
         document.querySelector('[data-step="4"]').classList.add("current-step");
 
         summaryPlan.textContent =
-          selectedPlan.children[1].children[0].textContent + " (Monthly)";
+          selectedPlan.children[1].children[0].textContent +
+          (yearlyPlan ? " (Yearly)" : " (Monthly)");
         summaryPlanPrice.textContent =
           selectedPlan.children[1].children[1].textContent;
 
