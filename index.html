@@ -92,14 +92,16 @@
                 />
               </div>
               <h5 class="validation hidden"></h5>
+            </form>
+            <div class="btn-wrapper">
               <a
                 href="#"
-                class="btn-next"
+                class="btn-next btn-next-first"
                 onclick="nextStep(this)"
                 data-step="1"
                 >Next Step</a
               >
-            </form>
+            </div>
           </div>
           <div class="detail hidden">
             <h1 class="detail-title">Select your plan</h1>
@@ -140,12 +142,22 @@
               <p class="yearly not-active">Yearly</p>
             </div>
             <h5 class="plan-validation hidden"></h5>
-            <a href="#" class="btn-next" onclick="nextStep(this)" data-step="2"
-              >Next Step</a
-            >
-            <a href="#" class="btn-back" onclick="backStep(this)" data-back="2"
-              >Go Back</a
-            >
+            <div class="btn-wrapper">
+              <a
+                href="#"
+                class="btn-next"
+                onclick="nextStep(this)"
+                data-step="2"
+                >Next Step</a
+              >
+              <a
+                href="#"
+                class="btn-back"
+                onclick="backStep(this)"
+                data-back="2"
+                >Go Back</a
+              >
+            </div>
           </div>
           <div class="detail hidden">
             <h1 class="detail-title">Pick add-ons</h1>
@@ -178,12 +190,22 @@
                 <p class="service-price">+$2/mo</p>
               </div>
             </div>
-            <a href="#" class="btn-next" onclick="nextStep(this)" data-step="3"
-              >Next Step</a
-            >
-            <a href="#" class="btn-back" onclick="backStep(this)" data-back="3"
-              >Go Back</a
-            >
+            <div class="btn-wrapper">
+              <a
+                href="#"
+                class="btn-next"
+                onclick="nextStep(this)"
+                data-step="3"
+                >Next Step</a
+              >
+              <a
+                href="#"
+                class="btn-back"
+                onclick="backStep(this)"
+                data-back="3"
+                >Go Back</a
+              >
+            </div>
           </div>
           <div class="detail hidden">
             <h1 class="detail-title">Finishing up</h1>
@@ -203,19 +225,25 @@
               <hr />
               <div class="summary-services"></div>
             </div>
-            <a
-              href="#"
-              class="btn-next confirm"
-              onclick="nextStep(this)"
-              data-step="4"
-              >Confirm</a
-            >
-            <a href="#" class="btn-back" onclick="backStep(this)" data-back="4"
-              >Go Back</a
-            >
             <div class="total">
               <h4>Total (per month)</h4>
               <p class="total-price"></p>
+            </div>
+            <div class="btn-wrapper">
+              <a
+                href="#"
+                class="btn-next confirm"
+                onclick="nextStep(this)"
+                data-step="4"
+                >Confirm</a
+              >
+              <a
+                href="#"
+                class="btn-back"
+                onclick="backStep(this)"
+                data-back="4"
+                >Go Back</a
+              >
             </div>
           </div>
           <div class="detail hidden thankyou">

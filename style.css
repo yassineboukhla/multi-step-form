@@ -566,10 +566,26 @@ input {
   .step-wrapper {
     display: none;
   }
+  .btn-wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
   .btn-next {
     position: static;
-    width: fit-content;
+    /* width: fit-content;
     margin-right: 0;
-    margin-left: auto;
+    margin-left: auto; */
+  }
+  .btn-back {
+    position: static;
+    order: -1;
+  }
+  .btn-next-first {
+    position: absolute;
+    right: 0%;
+    bottom: -50px;
   }
 }

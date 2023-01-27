@@ -52,8 +52,10 @@ function nextStep(elem) {
           : false;
         if (selectedPlan) {
           planValidation.classList.add("hidden");
-          elem.parentNode.classList.add("hidden");
-          elem.parentNode.nextElementSibling.classList.remove("hidden");
+          elem.parentNode.parentNode.classList.add("hidden");
+          elem.parentNode.parentNode.nextElementSibling.classList.remove(
+            "hidden"
+          );
           document
             .querySelector('[data-step="2"]')
             .classList.remove("current-step");
@@ -78,8 +80,10 @@ function nextStep(elem) {
         }
         break;
       case "3":
-        elem.parentNode.classList.add("hidden");
-        elem.parentNode.nextElementSibling.classList.remove("hidden");
+        elem.parentNode.parentNode.classList.add("hidden");
+        elem.parentNode.parentNode.nextElementSibling.classList.remove(
+          "hidden"
+        );
         document
           .querySelector('[data-step="3"]')
           .classList.remove("current-step");
@@ -186,8 +190,10 @@ function nextStep(elem) {
 
         break;
       case "4":
-        elem.parentNode.classList.add("hidden");
-        elem.parentNode.nextElementSibling.classList.remove("hidden");
+        elem.parentNode.parentNode.classList.add("hidden");
+        elem.parentNode.parentNode.nextElementSibling.classList.remove(
+          "hidden"
+        );
 
         break;
       default:
@@ -199,24 +205,30 @@ function nextStep(elem) {
 function backStep(elem) {
   switch (elem.dataset.back) {
     case "2":
-      elem.parentNode.classList.add("hidden");
-      elem.parentNode.previousElementSibling.classList.remove("hidden");
+      elem.parentNode.parentNode.classList.add("hidden");
+      elem.parentNode.parentNode.previousElementSibling.classList.remove(
+        "hidden"
+      );
       document
         .querySelector('[data-step="2"]')
         .classList.remove("current-step");
       document.querySelector('[data-step="1"]').classList.add("current-step");
       break;
     case "3":
-      elem.parentNode.classList.add("hidden");
-      elem.parentNode.previousElementSibling.classList.remove("hidden");
+      elem.parentNode.parentNode.classList.add("hidden");
+      elem.parentNode.parentNode.previousElementSibling.classList.remove(
+        "hidden"
+      );
       document
         .querySelector('[data-step="3"]')
         .classList.remove("current-step");
       document.querySelector('[data-step="2"]').classList.add("current-step");
       break;
     case "4":
-      elem.parentNode.classList.add("hidden");
-      elem.parentNode.previousElementSibling.classList.remove("hidden");
+      elem.parentNode.parentNode.classList.add("hidden");
+      elem.parentNode.parentNode.previousElementSibling.classList.remove(
+        "hidden"
+      );
       document
         .querySelector('[data-step="4"]')
         .classList.remove("current-step");
@@ -280,9 +292,9 @@ function changePlan() {
     yearlyPlan = false;
     circle.classList.remove("circle-right");
     circle.classList.add("circle-left");
-    plan1.children[1].children[1].textContent = "$9/yr";
-    plan2.children[1].children[1].textContent = "$12/yr";
-    plan3.children[1].children[1].textContent = "$15/yr";
+    plan1.children[1].children[1].textContent = "$9/mo";
+    plan2.children[1].children[1].textContent = "$12/mo";
+    plan3.children[1].children[1].textContent = "$15/mo";
     plans.forEach((elem) => {
       elem.removeChild(elem.lastChild);
     });
