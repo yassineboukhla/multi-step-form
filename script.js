@@ -317,14 +317,26 @@ function selectPlan(elem) {
 
 // Function responsible for selecting service
 function addService(elem) {
-  if (elem.children[0].checked == false) {
-    elem.children[0].checked = true;
-    selectedServices.push(elem);
+  if (elem.hasChildNodes()) {
+    if (elem.children[0].checked == false) {
+      elem.children[0].checked = true;
+      selectedServices.push(elem);
+    } else {
+      elem.children[0].checked = false;
+      selectedServices = selectedServices.filter((data) => {
+        if (data != elem) return data;
+      });
+    }
   } else {
-    elem.children[0].checked = false;
-    selectedServices = selectedServices.filter((data) => {
-      if (data != elem) return data;
-    });
+    if (elem.checked == false) {
+      elem.checked = true;
+      selectedServices.push(elem.parentNode);
+    } else {
+      elem.checked = false;
+      selectedServices = selectedServices.filter((data) => {
+        if (data != elem.parentNode) return data;
+      });
+    }
   }
 }
 
